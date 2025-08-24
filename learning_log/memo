@@ -68,6 +68,65 @@ Interface ***
 interface 는 new로 생성하지 않음
 
 
+Queue
+먼저들어간게 먼저 나온다.
+( 파이프? )
+한쪽방향
+deque  queue를 상속 받았음
+앞으로들어가서 앞 뒤로들어가서 뒤
+다 나올수있음
+
+queue deqque 는 linkedlist implements
+
+Queue 는 인터페이스
+
+Queue 메서드
+add     - 맨끝에 추가 / 꽉차면 error
+offer   - 맨끝에 추가 / 꽉차면 return false
+peek    - 맨앞 객체하나를 가져옴. / queue 에서 삭제안함
+poll    - 객체 하나를 가져오면서 queue 에서 삭제
+remove  - 객체를 삭제합니다. Element로 삭제
+
+Deque 메서드 (Queue 메서드에 first, last)
+addFirst    - 맨 앞 추가
+addLast     - 맨 뒤 추가
+peekFirst   - 맨 앞 가져오기
+peekLast    - 맨 뒤 가져오기
+pollFirst   - 맨 앞 가져오고 삭제 후 리턴
+pollLast    - 맨 뒤 가져오고 삭제 후 리턴
+
+PriorityQueue(우선순위큐)
+PriorityQueue<Integer> pq = new PriorityQueue<>();  // 오름차순
+1, 10, 8, 17, 25, 16, 7
+순으로 값을 add 하면
+        1
+    10      8
+   17  25 16  7
+   두개씩 나눠 같는다.
+   삼각형으로 비교해서 작은수가 있으면 부모랑 바꾼다.
+        1
+    10      7
+   17  25 16  8
+이러면 8과 7의 위치가 바뀐다. 7이 부모인 8보다 크기 때문에
+다 바꾸고 위에서부터 출력하게 된다.
+1 10 7 17 25 16 8 이된다.
+[1, 10, 7, 17, 25, 16, 8]
+
+PriorityQueue<Integer> pq2 = new PriorityQueue<>(Collections.reverseOrder());   // 내림차순
+내림차 순이면 위에거랑 반대로 큰거부터 정렬한다.
+그러므로 자식이 부모보다 크면 바꾼다
+[25, 17, 16, 1, 10, 8, 7]
+
+-------
+
+Arrays.fill(a,b);
+a에 b로 채운다.
+
+배열로 큐 구현하기
+필요 필드
+큐, 최대 용량, 데이터 수, 배열 맨앞 커서, 배열 맨뒤 커서
+add(1), peek(2), poll(3), clear(4), print(5), exit(0)
+
 
 
 

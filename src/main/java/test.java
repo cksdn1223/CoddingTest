@@ -2,31 +2,20 @@ import java.util.*;
 
 public class test {
     public static void main(String[] args) {
-        int[] arr = {1, 1, 1};
-        int firstIndex = -1;
-        int lastIndex = -1;
-        for(int i = 0 ; i < arr.length ; i++){
-            if(arr[i] == 2) {
-                firstIndex = i;
-                break;
-            }
+        int[] sides = {1, 2, 3};
+        int max = 0;
+        int plus = 0;
+        for(int num : sides){
+            if(max == 0) max = num;
+            else if(num > max) max = num;
         }
-        for(int i = arr.length-1 ; i > 0 ; i--){
-            if(arr[i] == 2) {
-                lastIndex = i;
-                break;
-            }
+        List<Integer> list = new ArrayList<>();
+        for(int num : sides){
+            list.add(num);
         }
-        int[] answer2 = {2};
-        int[] answer3 = {-1};
-        if(firstIndex == lastIndex) System.out.println(Arrays.toString(answer2));
-        else if(firstIndex == -1 && lastIndex == -1) System.out.println(Arrays.toString(answer3));
-        int[] answer = new int[lastIndex-firstIndex+1];
-        for(int i = 0 ; i < answer.length ; i++){
-            answer[i] = arr[firstIndex++];
-        }
+        list.remove(list.indexOf(max));
 
-        System.out.println(Arrays.toString(answer));
+        System.out.println(max + " " + plus);
 
     }
 }

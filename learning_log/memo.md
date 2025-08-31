@@ -118,6 +118,8 @@ PriorityQueue<Integer> pq2 = new PriorityQueue<>(Collections.reverseOrder());   
 [25, 17, 16, 1, 10, 8, 7]
 
 -------
+Arrays.sort(배열);
+배열을 정렬한다.
 
 Arrays.fill(a,b);
 a에 b로 채운다.
@@ -128,21 +130,38 @@ a에 b로 채운다.
 add(1), peek(2), poll(3), clear(4), print(5), exit(0)
 
 
+-----------------
+
+
+Stack
+
+LIFO 자료구조를 구현한 클래스
+Last In First Out
+
+push - 집어넣은 element를 return
+add - 들어갔는지 boolean return
+add(index, e) 인덱스에 추가
+
+peek()  - 맨위 가져옴 제거 안함
+pop()   - 맨위 가져옴 제거함
 
 
 
+StringBuilder
+StringBuilder sb = new StringBuilder();
+sb.append() 
+sb.insert()
+sb.delete()
 
 
+Collections.frequency(list, list.get(i));
+list.get(i) 가 list 에 몇개가 있는지 return 하는 함수
 
 
-
-
-
-
-
-
-
-
+알고리즘 정렬
+끝나면 문제만
+heap
+정렬
 
 
 
